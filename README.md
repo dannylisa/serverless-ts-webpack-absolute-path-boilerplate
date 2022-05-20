@@ -38,6 +38,10 @@ provider:
       PRIVATE_KEY: ${self:custom.CONFIG.${self:custom.STAGE}.PRIVATE_KEY} 
 ...
 ```
+3. Add `.gitignore`
+```
+config/config.js
+```
 
 ## Aliased absolute path
 1. Edit `webpack.config.js`
