@@ -1,5 +1,5 @@
 # serverless-ts-webpack-absolute-path-boilerplate
-Boilerplate of `Serverless X Aws Lambda` function with Typescript, Webpack and Aliased absolute path.
+Boilerplate of `Serverless X Aws Lambda` function with `Typescript`, `Webpack` and `Aliased absolute path`.
 
 
 
