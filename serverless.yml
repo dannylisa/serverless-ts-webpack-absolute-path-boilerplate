@@ -1,0 +1,32 @@
+org: [Your Organization]
+app: [Your App Name]
+service: [Your Service]
+
+frameworkVersion: '3'
+
+plugins: 
+  - serverless-webpack
+  - serverless-plugin-typescript
+
+custom:
+  STAGE: ${self:provider.stage}
+  CONFIG: ${file(./config/config.js):CONFIG}
+  webpack:
+    webpackConfig: './webpack.config.js'
+    includeModules: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: ${opt:stage, 'dev'}
+  environment:
+      STAGE: ${self:provider.stage}
+      PRIVATE_KEY: ${self:custom.CONFIG.${self:custom.STAGE}.PRIVATE_KEY} 
+
+
+functions:
+  hello:
+    handler: src/handler.run
+    events:
+      # Invoke Lambda function every minute
+      - schedule: rate(1 minute)
