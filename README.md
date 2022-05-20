@@ -38,7 +38,7 @@ provider:
       PRIVATE_KEY: ${self:custom.CONFIG.${self:custom.STAGE}.PRIVATE_KEY} 
 ...
 ```
-3. Add `.gitignore`
+3. Add to `.gitignore`
 ```
 config/config.js
 ```
