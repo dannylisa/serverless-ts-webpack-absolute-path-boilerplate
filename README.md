@@ -6,6 +6,8 @@ Boilerplate of `Serverless X Aws Lambda` function with `Typescript`, `Webpack` a
 ## Installation
 ```bash
 git clone https://github.com/dannylisa/serverless-ts-webpack-absolute-path-boilerplate [your_project_name]
+```
+```bash
 npm install
 ```
 
